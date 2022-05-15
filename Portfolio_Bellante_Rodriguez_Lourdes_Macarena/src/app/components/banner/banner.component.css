@@ -1,0 +1,60 @@
+#banner-background{
+    width: 100%;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#banner-title{
+    position:absolute;
+    color: white;
+    margin-top: 15%;
+    font-size: 8em;
+ 
+}
+
+.button-1{
+
+    align-items: center;
+    padding-bottom: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: inline-block;
+    cursor: pointer; 
+    position:absolute;
+    width: auto;
+    height: 6.5em;
+    margin-top: 30%;
+    border-radius: 5em;
+
+    background-color: #FA4BC5;
+    border-color: #FA4BC5;
+    color: white;
+    text-decoration: none;
+ 
+}
+
+.button-1:hover{
+
+    background-color: #D131A1;
+    border-color: #D131A1;
+ 
+}
+
+.icon-play{
+    width: 2em;
+    height: 2em;
+    float: left;
+    padding-left: 2em;
+    padding-top: 2em;
+}
+
+#button-title{
+    color:white;
+    float: left;
+    font-size: 2em;
+
+}

@@ -1,0 +1,10 @@
+#div-1{
+    position: absolute;
+}
+
+#sticky-elements{     
+    position: sticky;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
