@@ -1,3 +1,7 @@
+#logoAP{
+display: none;
+}
+
 #navbar{
     background-color: black;
     height: 100vh;
@@ -17,4 +21,37 @@
   
     padding: 4vh 1vh;
     cursor: pointer; 
+}
+
+
+@media(max-width: 384px){
+    #navbar{
+        background-color: black;
+        height: 10vh;
+        align-items: center;
+        flex-direction:row;
+      
+        top: 0;
+      
+        position: relative;
+        float: left;
+    }
+    
+    
+    .icons-navbar{
+        width: 5vh;
+        height: 5vh;
+        background-color: black;
+        padding: 0vh 1vh;
+        cursor: pointer; 
+        float: left;
+    }
+
+    #logoAP{
+        display:flex;
+        width: 12vh;
+        float: left;
+        margin-top: 2vh;
+        margin-right: 2vh;
+        }
 }
