@@ -32,11 +32,37 @@
 }
 
 p{
-    color: aliceblue;
+    color: white;
+}
+
+.about-me-all{
+    border-top-color: #FA4BC5;
+    border-top-style: solid;
+
 }
 
 .row{
-    border-top-color: #FA4BC5;
-    border-top-style: solid;
-    background-color: black;
+    margin-left: 2em;
+    margin-right: 2em;
+    color:white;
+    display: inline-block;
+}
+
+.column-about-me{
+    float: left;
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+
+.title-about-me{
+    background-color: #FA4BC5;
+    width: 10em;
+    padding: 1em;
+    border-radius: 5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.text-about-me{
+    margin-top: 20%;
 }
