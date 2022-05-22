@@ -67,3 +67,14 @@ p{
     margin-top: 0.5em;
 }
 
+.subtitle{
+    color: #D131A1;
+    margin-right: 2em;
+    margin-left: 1em;
+    margin-top: 2em;
+    font-size: 2em;
+}
+
+.row{
+    background-color: black;
+}

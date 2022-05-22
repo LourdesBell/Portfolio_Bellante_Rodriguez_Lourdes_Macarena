@@ -18,8 +18,8 @@ display: none;
 .icons-navbar{
     width: 4vh;
     height: 4vh;
-  
-    padding: 4vh 1vh;
+ 
+    padding: 1vh 1vh;
     cursor: pointer; 
 }
 
@@ -54,4 +54,6 @@ display: none;
         margin-top: 2vh;
         margin-right: 2vh;
         }
-}
+
+
+    }
