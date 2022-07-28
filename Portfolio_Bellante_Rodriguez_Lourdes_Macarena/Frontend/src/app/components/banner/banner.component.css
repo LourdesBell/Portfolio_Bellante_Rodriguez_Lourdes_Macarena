@@ -32,7 +32,7 @@
     cursor: pointer; 
     position:absolute;
     width: auto;
-    height: 6.5em;
+    height: 4em;
     margin-top: 35%;
     border-radius: 5em;
 
@@ -50,13 +50,7 @@
  
 }
 
-.icon-play{
-    width: 2em;
-    height: 2em;
-    float: left;
-    padding-left: 2em;
-    padding-top: 2em;
-}
+
 
 #button-title{
     color:white;
@@ -74,25 +68,22 @@
 
     #button-title{
         color:white;
-        float: left;
-        font-size: 1em;
+        float: center;
+        font-size: 1.5em;
         
     }
     
     .button-1{
 
-        padding-bottom: 2em;
+        
         padding-left: 1.5em;
         padding-right: 1.5em;
-        height: 3.4em;
-        margin-top: 35%;
+        height: 2em;
+
         border-radius: 5em;
     }
 
-    .icon-play{
-        padding-top: 0em;
-        display: none;
-    }
+
         
 }
 
@@ -111,11 +102,6 @@
 
     
     .button-1{
-        display: none;
-    }
-
-    .icon-play{
-        padding-top: 0em;
         display: none;
     }
 

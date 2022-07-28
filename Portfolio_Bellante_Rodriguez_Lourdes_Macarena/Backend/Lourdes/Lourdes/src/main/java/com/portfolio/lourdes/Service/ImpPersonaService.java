@@ -1,4 +1,3 @@
-
 package com.portfolio.lourdes.Service;
 
 import com.portfolio.lourdes.Entity.Persona;
@@ -10,30 +9,28 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ImpPersonaService implements IPersonaService{
-    
-    @Autowired IPersonaRepository ipersonarepository;
-    
+    @Autowired IPersonaRepository ipersonaRepository;
     
     @Override
     public List<Persona> getPersona() {
-        List<Persona> persona = ipersonarepository.findAll();
+        List<Persona> persona = ipersonaRepository.findAll();
         return persona;
     }
 
     @Override
     public void savePersona(Persona persona) {
-        ipersonarepository.save(persona);
+        ipersonaRepository.save(persona);
     }
 
     @Override
     public void deletePersona(Long id) {
-    ipersonarepository.deleteById(id);
+        ipersonaRepository.deleteById(id);
     }
 
     @Override
     public Persona findPersona(Long id) {
-    Persona persona= ipersonarepository.findById(id).orElse(null);
-    return persona;
+        Persona persona = ipersonaRepository.findById(id).orElse(null);
+        return persona;
     }
     
 }

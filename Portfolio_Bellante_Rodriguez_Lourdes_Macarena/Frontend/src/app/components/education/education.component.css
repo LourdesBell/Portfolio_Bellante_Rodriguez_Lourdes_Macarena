@@ -78,3 +78,31 @@ p{
 .row{
     background-color: black;
 }
+
+
+
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:visited,
+.btn-dark {
+    background-color: #00ba13 !important;
+    border-color: #00ba13 !important;
+  }
+.btn-dark:focus {
+    background-color: #00ba13!important;
+    border-color: #00ba13 !important;
+}
+.btn-outline-dark {
+    background-color: #00ba13!important;
+    color: #00ba13!important;
+}
+.btn-dark {
+    border-color: #00ba13 !important;
+    forced-color-adjust: #00ba13 !important;
+}
+
+.container{
+   
+    margin-right: 50em;
+    width: 100%;
+}
