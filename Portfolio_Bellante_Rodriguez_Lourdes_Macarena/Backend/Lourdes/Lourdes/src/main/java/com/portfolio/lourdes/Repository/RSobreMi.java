@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RSobreMi extends JpaRepository<SobreMi, Integer>{
-    public Optional<SobreMi> findByTituloSobreMi(String tituloSobreMi);
-    public boolean existsByTituloSobreMi(String tituloSobreMi);
+    public Optional<SobreMi>findByNombreSobreMi(String nombreSobreMi);
+    public boolean existsByNombreSobreMi(String nombreSobreMi);
 }

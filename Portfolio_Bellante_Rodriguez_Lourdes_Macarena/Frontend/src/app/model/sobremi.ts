@@ -1,11 +1,11 @@
 export class SobreMi {
 
     id? : number;
-    tituloSobreMi : string;
+    nombreSobreMi : string;
     descripcionSobreMi: string;
 
-    constructor(tituloSobreMi: string, descripcionSobreMi: string){
-        this.tituloSobreMi = tituloSobreMi;
+    constructor(nombreSobreMi: string, descripcionSobreMi: string){
+        this.nombreSobreMi = nombreSobreMi;
         this.descripcionSobreMi = descripcionSobreMi;
     }
 

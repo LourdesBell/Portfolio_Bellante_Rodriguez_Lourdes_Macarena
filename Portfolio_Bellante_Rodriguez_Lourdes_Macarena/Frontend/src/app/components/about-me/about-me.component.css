@@ -164,6 +164,7 @@ p{
 .btn-dark {
     background-color: #00ba13 !important;
     border-color: #00ba13 !important;
+    margin-left: 0.25em;
   }
 .btn-dark:focus {
     background-color: #00ba13!important;

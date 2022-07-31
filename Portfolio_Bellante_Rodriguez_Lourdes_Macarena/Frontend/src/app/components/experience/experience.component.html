@@ -23,11 +23,11 @@
                     <td style="color: #FFFFFF;">{{Experiencia.descripcionE}}</td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}">
-                            <i class="bi bi-pencil"></i> EDIT</button>
+                            <i class="bi bi-pencil"></i> </button>
                     </td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-                            <i class="bi bi-trash"></i> DELETE</button>
+                            <i class="bi bi-trash"></i> </button>
                     </td>
                 </tr>
             </tbody>

@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/sobremi")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CSobreMi {
-    
     @Autowired
     SSobreMi sSobreMi;
     
@@ -47,44 +46,41 @@ public class CSobreMi {
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         }
         sSobreMi.delete(id);
-        return new ResponseEntity(new Mensaje("producto eliminado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Eliminado"), HttpStatus.OK);
     }
 
     
     @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody dtoSobreMi dtosobremi){      
-        if(StringUtils.isBlank(dtosobremi.getTituloSobreMi()))
-            return new ResponseEntity(new Mensaje("El Titulo es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sSobreMi.existsByTituloSobreMi(dtosobremi.getTituloSobreMi()))
-            return new ResponseEntity(new Mensaje("Esa info existe"), HttpStatus.BAD_REQUEST);
+    public ResponseEntity<?> create(@RequestBody dtoSobreMi dtoSobreMi){      
+        if(StringUtils.isBlank(dtoSobreMi.getNombreSobreMi()))
+            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+        if(sSobreMi.existsByNombreSobreMi(dtoSobreMi.getNombreSobreMi()))
+            return new ResponseEntity(new Mensaje("Existe"), HttpStatus.BAD_REQUEST);
         
-        SobreMi sobreMi = new SobreMi(dtosobremi.getTituloSobreMi(), dtosobremi.getDescripcionSobreMi());
+        SobreMi sobreMi = new SobreMi(dtoSobreMi.getNombreSobreMi(), dtoSobreMi.getDescripcionSobreMi());
         sSobreMi.save(sobreMi);
         
-        return new ResponseEntity(new Mensaje("Sobre Mi agregado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Agregado"), HttpStatus.OK);
     }
     
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoSobreMi dtosobremi){
+    public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoSobreMi dtoSobreMi){
         //Validamos si existe el ID
         if(!sSobreMi.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        
-        
-        if(sSobreMi.existsByTituloSobreMi(dtosobremi.getTituloSobreMi()) && sSobreMi.getByTituloSobreMi(dtosobremi.getTituloSobreMi()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Ese Sobre Mi ya existe"), HttpStatus.BAD_REQUEST);
-        
+        //Compara nombre 
+        if(sSobreMi.existsByNombreSobreMi(dtoSobreMi.getNombreSobreMi()) && sSobreMi.getByNombreSobreMi(dtoSobreMi.getNombreSobreMi()).get().getId() != id)
+            return new ResponseEntity(new Mensaje("Ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
-        if(StringUtils.isBlank(dtosobremi.getTituloSobreMi()))
-            return new ResponseEntity(new Mensaje("El titulo es obligatorio"), HttpStatus.BAD_REQUEST);
+        if(StringUtils.isBlank(dtoSobreMi.getNombreSobreMi()))
+            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         
         SobreMi sobreMi = sSobreMi.getOne(id).get();
-        sobreMi.setTituloSobreMi(dtosobremi.getTituloSobreMi());
-        sobreMi.setDescripcionSobreMi((dtosobremi.getDescripcionSobreMi()));
+        sobreMi.setNombreSobreMi(dtoSobreMi.getNombreSobreMi());
+        sobreMi.setDescripcionSobreMi((dtoSobreMi.getDescripcionSobreMi()));
         
         sSobreMi.save(sobreMi);
-        return new ResponseEntity(new Mensaje("SobreMi actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Actualizadao"), HttpStatus.OK);
              
     }
-    
 }

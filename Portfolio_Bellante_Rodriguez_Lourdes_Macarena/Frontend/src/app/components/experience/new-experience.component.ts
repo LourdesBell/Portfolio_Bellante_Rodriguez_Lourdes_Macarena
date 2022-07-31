@@ -10,6 +10,7 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
   styleUrls: ['./new-experience.component.css']
 })
 export class NewExperienceComponent implements OnInit {
+  
   nombreE: string = '';
   descripcionE: string = '';
 

@@ -11,23 +11,23 @@ import org.springframework.stereotype.Service;
 @Service
 @Transactional
 public class SSobreMi {
-     @Autowired
+      @Autowired
      RSobreMi rSobreMi;
      
-     public List<SobreMi> list(){
+     public List<SobreMi>list(){
          return rSobreMi.findAll();
      }
      
-     public Optional<SobreMi> getOne(int id){
+     public Optional<SobreMi>getOne(int id){
          return rSobreMi.findById(id);
      }
      
-     public Optional<SobreMi> getByTituloSobreMi(String tituloSobreMi){
-         return rSobreMi.findByTituloSobreMi(tituloSobreMi);
+     public Optional<SobreMi>getByNombreSobreMi(String nombreSobreMi){
+         return rSobreMi.findByNombreSobreMi(nombreSobreMi);
      }
      
-     public void save(SobreMi sobre){
-         rSobreMi.save(sobre);
+     public void save(SobreMi sobreMi){
+         rSobreMi.save(sobreMi);
      }
      
      public void delete(int id){
@@ -38,7 +38,7 @@ public class SSobreMi {
          return rSobreMi.existsById(id);
      }
      
-     public boolean existsByTituloSobreMi(String tituloSobreMi){
-         return rSobreMi.existsByTituloSobreMi(tituloSobreMi);
+     public boolean existsByNombreSobreMi(String nombreSobreMi){
+         return rSobreMi.existsByNombreSobreMi(nombreSobreMi);
      }
 }

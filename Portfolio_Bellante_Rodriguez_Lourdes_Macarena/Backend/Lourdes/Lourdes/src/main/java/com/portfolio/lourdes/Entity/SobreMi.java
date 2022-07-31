@@ -5,13 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
-public class SobreMi {
+public class SobreMi{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String tituloSobreMi;
+    private String nombreSobreMi;
     private String descripcionSobreMi;
     
     //Constructores
@@ -19,9 +18,9 @@ public class SobreMi {
     public SobreMi() {
     }
 
-    public SobreMi(String tituloSobreMi, String descripcionSobreMi) {
-        this.tituloSobreMi = tituloSobreMi;
-        this.descripcionSobreMi = descripcionSobreMi;
+    public SobreMi(String nombreSobreMi, String descripcionSobreMi) {
+        this.nombreSobreMi= nombreSobreMi;
+        this.descripcionSobreMi= descripcionSobreMi;
     }
     
     //Getters and setters
@@ -34,20 +33,20 @@ public class SobreMi {
         this.id = id;
     }
 
-    public String getSobreMi() {
-        return tituloSobreMi;
+    public String getNombreSobreMi() {
+        return nombreSobreMi;
     }
 
-    public void setTituloSobreMi(String tituloSobreMi) {
-        this.tituloSobreMi = tituloSobreMi;
+    public void setNombreSobreMi(String nombreSobreMi) {
+        this.nombreSobreMi= nombreSobreMi;
     }
 
-    public String getDescripcionSobreMi() {
+    public String getdescripcionSobreMi() {
         return descripcionSobreMi;
     }
 
     public void setDescripcionSobreMi(String descripcionSobreMi) {
-        this.descripcionSobreMi = descripcionSobreMi;
+        this.descripcionSobreMi= descripcionSobreMi;
     }
     
 }

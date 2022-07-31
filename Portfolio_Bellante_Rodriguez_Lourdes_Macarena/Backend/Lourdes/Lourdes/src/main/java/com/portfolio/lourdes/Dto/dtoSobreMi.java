@@ -1,11 +1,9 @@
-
 package com.portfolio.lourdes.Dto;
-
 import javax.validation.constraints.NotBlank;
 
-public class dtoSobreMi {
+public class dtoSobreMi{
     @NotBlank
-    private String tituloSobreMi;
+    private String nombreSobreMi;
     @NotBlank
     private String descripcionSobreMi;
     
@@ -14,18 +12,18 @@ public class dtoSobreMi {
     public dtoSobreMi() {
     }
 
-    public dtoSobreMi(String tituloSobreMi, String descripcionSobreMi) {
-        this.tituloSobreMi = tituloSobreMi;
-        this.descripcionSobreMi = descripcionSobreMi;
+    public dtoSobreMi(String nombreSobreMi, String descripcionSobreMi) {
+        this.nombreSobreMi= nombreSobreMi;
+        this.descripcionSobreMi= descripcionSobreMi;
     }
     //Getters & Setters
 
-    public String getTituloSobreMi() {
-        return tituloSobreMi;
+    public String getNombreSobreMi() {
+        return nombreSobreMi;
     }
 
-    public void setTituloSobreMi(String tituloSobreMi) {
-        this.tituloSobreMi = tituloSobreMi;
+    public void setNombreSobreMi(String nombreSobreMi) {
+        this.nombreSobreMi= nombreSobreMi;
     }
 
     public String getDescripcionSobreMi() {
@@ -33,7 +31,7 @@ public class dtoSobreMi {
     }
 
     public void setDescripcionSobreMi(String descripcionSobreMi) {
-        this.descripcionSobreMi = descripcionSobreMi;
+        this.descripcionSobreMi= descripcionSobreMi;
     }
     
 }
