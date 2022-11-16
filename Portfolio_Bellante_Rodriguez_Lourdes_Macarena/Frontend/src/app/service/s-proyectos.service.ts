@@ -9,7 +9,7 @@ import { Proyectos } from '../model/proyectos';
 })
 export class SProyectosService {
 
-  expURL = 'http://localhost:8080/proyectos/';
+  expURL = 'https://aplourdesfront.web.app/proyectos/';
 
   constructor(private httpClient: HttpClient) { }
 

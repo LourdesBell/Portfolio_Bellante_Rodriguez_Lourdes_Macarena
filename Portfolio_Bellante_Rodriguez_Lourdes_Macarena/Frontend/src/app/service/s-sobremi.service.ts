@@ -8,7 +8,7 @@ import { SobreMi } from '../model/sobremi';
   providedIn: 'root'
 })
 export class SSobreMiService {
-  expURL = 'http://localhost:8080/sobremi/';
+  expURL = 'https://aplourdesfront.web.app/sobremi/';
 
   constructor(private httpClient: HttpClient) { }
   

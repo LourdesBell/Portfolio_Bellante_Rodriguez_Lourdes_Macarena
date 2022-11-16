@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class SHabilidadesService {
 
-  expURL = 'http://localhost:8080/habilidades/';
+  expURL = 'https://aplourdesfront.web.app/habilidades/';
 
   constructor(private httpClient: HttpClient) { }
 
